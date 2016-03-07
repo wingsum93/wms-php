@@ -3,6 +3,7 @@ class News_model extends CI_Model {
 
         public function __construct()
         {
+				
                 $this->load->database();
         }
 
@@ -17,7 +18,7 @@ class News_model extends CI_Model {
 			return $query->row_array();
 		}
 		public function set_news(){
-			$this->load->helper('url');
+				
 				$slug = url_title($this->input->post('title'), 'dash', TRUE);
 
 				$data = array(
